@@ -41,7 +41,8 @@ T_MAX = int(os.environ["RWKV_T_MAX"])  # TAKES LOTS OF VRAM!
 
 from torch.utils.cpp_extension import load
 
-wkv_cuda = load(name=f"wkv_{T_MAX}", sources=["cuda/wkv_op.cpp", "cuda/wkv_cuda.cu"], verbose=True, extra_cuda_cflags=["-res-usage", "--maxrregcount 60", "--use_fast_math", "-O3", "-Xptxas -O3", f"-DTmax={T_MAX}"])
+cuda_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "cuda")
+wkv_cuda = load(name=f"wkv_{T_MAX}", sources=[os.path.join(cuda_dir, "wkv_op.cpp"), os.path.join(cuda_dir, "wkv_cuda.cu")], verbose=True, extra_cuda_cflags=["-res-usage", "--maxrregcount 60", "--use_fast_math", "-O3", "-Xptxas -O3", f"-DTmax={T_MAX}"])
 
 
 class WKV(torch.autograd.Function):
@@ -511,8 +512,7 @@ class RWKV(pl.LightningModule):
 
     def training_step_end(self, batch_parts):
         all = self.all_gather(batch_parts)
-        if self.trainer.is_global_zero:
-            self.trainer.my_loss_all = all
+        self.trainer.my_loss_all = all
 
     def generate_init_weight(self):
         print(

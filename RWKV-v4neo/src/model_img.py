@@ -400,8 +400,7 @@ class RWKV_IMG(pl.LightningModule):
 
     def training_step_end(self, batch_parts):
         all = self.all_gather(batch_parts)
-        if self.trainer.is_global_zero:
-            self.trainer.my_loss_all = all
+        self.trainer.my_loss_all = all
 
     def generate_init_weight(self):
         print(

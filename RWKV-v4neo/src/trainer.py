@@ -1,4 +1,5 @@
 import os, math, time, datetime, subprocess
+from ray.air import session
 import torch
 from torch.utils.data import DataLoader
 import pytorch_lightning as pl
@@ -55,9 +56,9 @@ class train_callback(pl.Callback):
         # rank_zero_info(f"{real_step} {lr}")
 
         if trainer.global_step == 0:
+            trainer.my_loss_sum = 0
+            trainer.my_loss_count = 0
             if trainer.is_global_zero:  # logging
-                trainer.my_loss_sum = 0
-                trainer.my_loss_count = 0
                 trainer.my_log = open(args.proj_dir + "/train_log.txt", "a")
                 trainer.my_log.write(f"NEW RUN {args.my_timestamp}\n{vars(self.args)}\n")
                 try:
@@ -79,23 +80,24 @@ class train_callback(pl.Callback):
 
     def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx):
         args = self.args
+        t_now = time.time_ns()
+        token_per_step = args.ctx_len * args.real_bsz
+        real_step = trainer.global_step + args.epoch_begin * args.epoch_steps
+        kt_s = 0
+        try:
+            t_cost = (t_now - trainer.my_time_ns) / 1e9
+            kt_s = token_per_step / t_cost / 1000
+        except:
+            pass
+        trainer.my_time_ns = t_now
+        trainer.my_loss = trainer.my_loss_all.float().mean().item()
+        trainer.my_loss_sum += trainer.my_loss
+        trainer.my_loss_count += 1
+        trainer.my_epoch_loss = trainer.my_loss_sum / trainer.my_loss_count
+        session.report(
+            {"loss": trainer.my_loss, "lr": trainer.my_lr,  "Gtokens": real_step * token_per_step / 1e9}
+        )
         if trainer.is_global_zero:  # logging
-            t_now = time.time_ns()
-            token_per_step = args.ctx_len * args.real_bsz
-            real_step = trainer.global_step + args.epoch_begin * args.epoch_steps
-            kt_s = 0
-            try:
-                t_cost = (t_now - trainer.my_time_ns) / 1e9
-                kt_s = token_per_step / t_cost / 1000
-                self.log("REAL it/s", 1.0 / t_cost, prog_bar=True, on_step=True)
-                self.log("Kt/s", kt_s, prog_bar=True, on_step=True)
-            except:
-                pass
-            trainer.my_time_ns = t_now
-            trainer.my_loss = trainer.my_loss_all.float().mean().item()
-            trainer.my_loss_sum += trainer.my_loss
-            trainer.my_loss_count += 1
-            trainer.my_epoch_loss = trainer.my_loss_sum / trainer.my_loss_count
             self.log("lr", trainer.my_lr, prog_bar=True, on_step=True)
             self.log("loss", trainer.my_epoch_loss, prog_bar=True, on_step=True)
             # self.log("s", real_step, prog_bar=True, on_step=True)
@@ -146,8 +148,8 @@ class train_callback(pl.Callback):
             trainer.my_log.write(f"{args.epoch_begin + trainer.current_epoch} {trainer.my_epoch_loss:.6f} {math.exp(trainer.my_epoch_loss):.4f} {trainer.my_lr:.8f} {datetime.datetime.now()} {trainer.current_epoch}\n")
             trainer.my_log.flush()
 
-            trainer.my_loss_sum = 0
-            trainer.my_loss_count = 0
+        trainer.my_loss_sum = 0
+        trainer.my_loss_count = 0
 
 
 @rank_zero_only
