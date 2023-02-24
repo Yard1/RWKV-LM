@@ -9,7 +9,6 @@ torch._C._jit_set_profiling_mode(True)
 import torch.nn as nn
 from torch.nn import functional as F
 import pytorch_lightning as pl
-from pytorch_lightning.utilities import rank_zero_info, rank_zero_only
 from pytorch_lightning.strategies import DeepSpeedStrategy
 import deepspeed
 from deepspeed.ops.adam import DeepSpeedCPUAdam, FusedAdam

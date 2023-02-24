@@ -2,7 +2,6 @@ import os
 import ray
 import ray.util.scheduling_strategies
 import subprocess
-from pathlib import Path
 import argparse
 
 def force_on_node(node_id: str, remote_func_or_actor_class):
@@ -56,7 +55,7 @@ def download_pile(dataset_name):
     )
     run_on_every_node(download_pile, dataset_name=dataset_name)
     subprocess.run(
-        # Use latest deepspeed for actual training
+        # Use latest deepspeed for actual training. Will crash otherwise
         "pip uninstall -y deepspeed && pip install -U --user deepspeed"
     )
 
