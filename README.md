@@ -5,6 +5,9 @@ RWKV-v4neo on Ray Train. Only the `RWKV-v4neo/train.py` script has been modified
 Cluster environment:
 ![Cluster environment](cluster_env.png)
 
+Cluster config:
+At least 2 g5.4xlarge or bigger.
+
 Original readme in `ORIGINAL_README.md`.
 
 ## Instructions
