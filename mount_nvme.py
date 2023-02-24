@@ -36,6 +36,14 @@ def prec():
    #subprocess.run("cp -r /mnt/cluster_storage/TorchTrainer_2023-02-21_15-52-40/TorchTrainer_d3578_00000_0_2023-02-21_15-52-41/checkpoint_000000 /nvme", shell=True, check=True)
     subprocess.run("cd /nvme; wget https://data.deepai.org/enwik8.zip && unzip enwik8.zip; ls", shell=True, check=True)
 
+@ray.remote(num_gpus=1)
+def download_model():
+    base_model_name = "RWKV-4-Pile-1B5" #@param ["RWKV-4-Pile-1B5", "RWKV-4-Pile-430M", "RWKV-4-Pile-169M"]
+    base_model_url = f"https://huggingface.co/BlinkDL/{base_model_name.lower()}"
+   #subprocess.run("cp -r /mnt/cluster_storage/TorchTrainer_2023-02-21_15-52-40/TorchTrainer_d3578_00000_0_2023-02-21_15-52-41/checkpoint_000000 /nvme", shell=True, check=True)
+    subprocess.run(f"cd /nvme; git lfs clone {base_model_url}; ls '{base_model_name.lower()}'", shell=True, check=True)
+
+
 if __name__ == "__main__":
     ray.init()
-    run_on_every_node(prec)
+    run_on_every_node(download_model)

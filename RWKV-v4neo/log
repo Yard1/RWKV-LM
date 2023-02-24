@@ -1,0 +1,1116 @@
+2023-02-23 16:58:41.310143: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-02-23 16:58:42.084905: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-02-23 16:58:42.084981: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-02-23 16:58:42.084986: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import MultiIndex, Int64Index
+find: ‘.git’: No such file or directory
+2023-02-23 16:58:50,217	INFO worker.py:1360 -- Connecting to existing Ray cluster at address: 10.0.7.85:6379...
+2023-02-23 16:58:50,226	INFO worker.py:1548 -- Connected to Ray cluster. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+2023-02-23 16:58:50,234	INFO packaging.py:330 -- Pushing file package 'gcs://_ray_pkg_55b2c8dba3372724706b993a0ba640a2.zip' (2.49MiB) to Ray cluster...
+2023-02-23 16:58:50,252	INFO packaging.py:343 -- Successfully pushed file package 'gcs://_ray_pkg_55b2c8dba3372724706b993a0ba640a2.zip'.
+(TrainTrainable pid=161702) 2023-02-23 16:58:56.409223: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+(TrainTrainable pid=161702) To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(TrainTrainable pid=161702) 2023-02-23 16:58:57.169611: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(TrainTrainable pid=161702) 2023-02-23 16:58:57.169674: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(TrainTrainable pid=161702) 2023-02-23 16:58:57.169680: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+(TrainTrainable pid=161702) /home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+(TrainTrainable pid=161702)   from pandas import MultiIndex, Int64Index
+== Status ==
+Current time: 2023-02-23 16:59:05 (running for 00:00:15.19)
+Memory usage on this node: 7.8/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+(RayTrainWorker pid=162345) 2023-02-23 16:59:09,257	INFO config.py:86 -- Setting up process group for: env:// [rank=0, world_size=8]
+== Status ==
+Current time: 2023-02-23 16:59:10 (running for 00:00:20.19)
+Memory usage on this node: 8.6/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+(RayTrainWorker pid=162345) 2023-02-23 16:59:12.762330: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+(RayTrainWorker pid=162345) To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(RayTrainWorker pid=162348) 2023-02-23 16:59:12.779750: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+(RayTrainWorker pid=162348) To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(RayTrainWorker pid=162346) 2023-02-23 16:59:12.760144: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+(RayTrainWorker pid=162346) To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(RayTrainWorker pid=62754, ip=10.0.38.113) 2023-02-23 16:59:12.791297: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+(RayTrainWorker pid=62754, ip=10.0.38.113) To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(RayTrainWorker pid=62753, ip=10.0.38.113) 2023-02-23 16:59:12.767295: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+(RayTrainWorker pid=62753, ip=10.0.38.113) To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(RayTrainWorker pid=62752, ip=10.0.38.113) 2023-02-23 16:59:12.773301: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+(RayTrainWorker pid=62752, ip=10.0.38.113) To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(RayTrainWorker pid=62751, ip=10.0.38.113) 2023-02-23 16:59:12.769047: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+(RayTrainWorker pid=62751, ip=10.0.38.113) To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(RayTrainWorker pid=162347) 2023-02-23 16:59:12.788468: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+(RayTrainWorker pid=162347) To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(RayTrainWorker pid=162345) 2023-02-23 16:59:13.586524: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=162345) 2023-02-23 16:59:13.586590: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=162345) 2023-02-23 16:59:13.586596: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+(RayTrainWorker pid=162346) 2023-02-23 16:59:13.586472: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=162346) 2023-02-23 16:59:13.586537: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=162346) 2023-02-23 16:59:13.586543: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+(RayTrainWorker pid=62754, ip=10.0.38.113) 2023-02-23 16:59:13.619698: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=62754, ip=10.0.38.113) 2023-02-23 16:59:13.619764: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=62754, ip=10.0.38.113) 2023-02-23 16:59:13.619771: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+(RayTrainWorker pid=62753, ip=10.0.38.113) 2023-02-23 16:59:13.595698: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=62753, ip=10.0.38.113) 2023-02-23 16:59:13.595976: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=62753, ip=10.0.38.113) 2023-02-23 16:59:13.595983: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+(RayTrainWorker pid=62752, ip=10.0.38.113) 2023-02-23 16:59:13.595766: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=62752, ip=10.0.38.113) 2023-02-23 16:59:13.595842: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=62752, ip=10.0.38.113) 2023-02-23 16:59:13.595849: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+(RayTrainWorker pid=62751, ip=10.0.38.113) 2023-02-23 16:59:13.595712: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=62751, ip=10.0.38.113) 2023-02-23 16:59:13.595785: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=62751, ip=10.0.38.113) 2023-02-23 16:59:13.595793: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+(RayTrainWorker pid=162348) 2023-02-23 16:59:13.605090: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=162348) 2023-02-23 16:59:13.605155: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=162348) 2023-02-23 16:59:13.605160: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+(RayTrainWorker pid=162347) 2023-02-23 16:59:13.609537: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=162347) 2023-02-23 16:59:13.609603: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64
+(RayTrainWorker pid=162347) 2023-02-23 16:59:13.609609: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+== Status ==
+Current time: 2023-02-23 16:59:15 (running for 00:00:25.19)
+Memory usage on this node: 9.4/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+(RayTrainWorker pid=162345) /home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+(RayTrainWorker pid=162345)   from pandas import MultiIndex, Int64Index
+(RayTrainWorker pid=62754, ip=10.0.38.113) /home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+(RayTrainWorker pid=62754, ip=10.0.38.113)   from pandas import MultiIndex, Int64Index
+(RayTrainWorker pid=62753, ip=10.0.38.113) /home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+(RayTrainWorker pid=62753, ip=10.0.38.113)   from pandas import MultiIndex, Int64Index
+(RayTrainWorker pid=62752, ip=10.0.38.113) /home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+(RayTrainWorker pid=62752, ip=10.0.38.113)   from pandas import MultiIndex, Int64Index
+(RayTrainWorker pid=62751, ip=10.0.38.113) /home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+(RayTrainWorker pid=62751, ip=10.0.38.113)   from pandas import MultiIndex, Int64Index
+== Status ==
+Current time: 2023-02-23 16:59:20 (running for 00:00:30.20)
+Memory usage on this node: 9.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+(RayTrainWorker pid=162347) /home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+(RayTrainWorker pid=162347)   from pandas import MultiIndex, Int64Index
+(RayTrainWorker pid=162348) /home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+(RayTrainWorker pid=162348)   from pandas import MultiIndex, Int64Index
+(RayTrainWorker pid=162346) /home/ray/anaconda3/lib/python3.8/site-packages/xgboost/compat.py:31: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+(RayTrainWorker pid=162346)   from pandas import MultiIndex, Int64Index
+(RayTrainWorker pid=62754, ip=10.0.38.113) 
+(RayTrainWorker pid=62754, ip=10.0.38.113) ############################################################################
+(RayTrainWorker pid=62754, ip=10.0.38.113) #
+(RayTrainWorker pid=62754, ip=10.0.38.113) # RWKV-4 BF16 on 2x4 GPU, bsz 2x4x11=88, deepspeed_stage_2_offload with grad_cp
+(RayTrainWorker pid=62754, ip=10.0.38.113) #
+(RayTrainWorker pid=62754, ip=10.0.38.113) # Data = /nvme/enwik8 (utf-8), ProjDir = /nvme/out
+(RayTrainWorker pid=62754, ip=10.0.38.113) #
+(RayTrainWorker pid=62754, ip=10.0.38.113) # Epoch = 0 to 999 (will continue afterwards), save every 5 epoch
+(RayTrainWorker pid=62754, ip=10.0.38.113) #
+(RayTrainWorker pid=62754, ip=10.0.38.113) # Each "epoch" = 200 steps, 17600 samples, 18022400 tokens
+(RayTrainWorker pid=62754, ip=10.0.38.113) #
+(RayTrainWorker pid=62754, ip=10.0.38.113) # Model = 24 n_layer, 2048 n_embd, 1024 ctx_len
+(RayTrainWorker pid=62754, ip=10.0.38.113) #
+(RayTrainWorker pid=62754, ip=10.0.38.113) # Adam = lr 1e-05 to 1e-05, warmup 0 steps, beta (0.9, 0.999), eps 1e-08
+(RayTrainWorker pid=62754, ip=10.0.38.113) #
+(RayTrainWorker pid=62754, ip=10.0.38.113) # Found torch 1.13.1+cu116, recommend 1.13.1+cu117 or newer
+(RayTrainWorker pid=62754, ip=10.0.38.113) # Found deepspeed 0.8.1, recommend 0.7.0 (faster than newer versions)
+(RayTrainWorker pid=62754, ip=10.0.38.113) # Found pytorch_lightning 1.9.3, recommend 1.9.1 or newer
+(RayTrainWorker pid=62754, ip=10.0.38.113) #
+(RayTrainWorker pid=62754, ip=10.0.38.113) ############################################################################
+(RayTrainWorker pid=62754, ip=10.0.38.113) 
+(RayTrainWorker pid=62754, ip=10.0.38.113) {'load_model': '/nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth', 'wandb': '', 'proj_dir': '/nvme/out', 'random_seed': -1, 'data_file': '/nvme/enwik8', 'data_type': 'utf-8', 'vocab_size': 50277, 'ctx_len': 1024, 'epoch_steps': 200, 'epoch_count': 1000, 'epoch_begin': 0, 'epoch_save': 5, 'micro_bsz': 11, 'n_layer': 24, 'n_embd': 2048, 'dim_att': 2048, 'dim_ffn': 8192, 'pre_ffn': 0, 'head_qk': 0, 'tiny_att_dim': 0, 'tiny_att_layer': -999, 'lr_init': 1e-05, 'lr_final': 1e-05, 'warmup_steps': 0, 'beta1': 0.9, 'beta2': 0.999, 'adam_eps': 1e-08, 'grad_cp': 1, 'my_pile_stage': 0, 'my_pile_shift': -1, 'my_pile_edecay': 0, 'layerwise_lr': 1, 'ds_bucket_mb': 200, 'my_img_version': 0, 'my_img_size': 0, 'my_img_bit': 0, 'my_img_clip': 'x', 'my_img_clip_scale': 1, 'my_img_l1_scale': 0, 'my_img_encoder': 'x', 'my_sample_len': 0, 'my_ffn_shift': 1, 'my_att_shift': 1, 'my_pos_emb': 0, 'load_partial': 0, 'magic_prime': 0, 'my_qa_mask': 0, 'my_testing': '', 'logger': False, 'enable_checkpointing': False, 'default_root_dir': None, 'gradient_clip_val': 1.0, 'gradient_clip_algorithm': None, 'num_nodes': 2, 'num_processes': None, 'devices': '4', 'gpus': None, 'auto_select_gpus': None, 'tpu_cores': None, 'ipus': None, 'enable_progress_bar': True, 'overfit_batches': 0.0, 'track_grad_norm': -1, 'check_val_every_n_epoch': 100000000000000000000, 'fast_dev_run': False, 'accumulate_grad_batches': None, 'max_epochs': -1, 'min_epochs': None, 'max_steps': -1, 'min_steps': None, 'max_time': None, 'limit_train_batches': None, 'limit_val_batches': None, 'limit_test_batches': None, 'limit_predict_batches': None, 'val_check_interval': None, 'log_every_n_steps': 100000000000000000000, 'accelerator': 'gpu', 'strategy': 'deepspeed_stage_2_offload', 'sync_batchnorm': False, 'precision': 'bf16', 'enable_model_summary': True, 'num_sanity_val_steps': 0, 'resume_from_checkpoint': None, 'profiler': None, 'benchmark': None, 'reload_dataloaders_every_n_epochs': 0, 'auto_lr_find': False, 'replace_sampler_ddp': False, 'detect_anomaly': False, 'auto_scale_batch_size': False, 'plugins': None, 'amp_backend': None, 'amp_level': None, 'move_metrics_to_cpu': False, 'multiple_trainloader_mode': 'max_size_cycle', 'inference_mode': True, 'my_timestamp': '2023-02-23-16-59-21', 'betas': (0.9, 0.999), 'real_bsz': 88, 'run_name': '50277 ctx1024 L24 D2048'}
+(RayTrainWorker pid=62754, ip=10.0.38.113) 
+(RayTrainWorker pid=62753, ip=10.0.38.113) 
+(RayTrainWorker pid=62753, ip=10.0.38.113) ############################################################################
+(RayTrainWorker pid=62753, ip=10.0.38.113) #
+(RayTrainWorker pid=62753, ip=10.0.38.113) # RWKV-4 BF16 on 2x4 GPU, bsz 2x4x11=88, deepspeed_stage_2_offload with grad_cp
+(RayTrainWorker pid=62753, ip=10.0.38.113) #
+(RayTrainWorker pid=62753, ip=10.0.38.113) # Data = /nvme/enwik8 (utf-8), ProjDir = /nvme/out
+(RayTrainWorker pid=62753, ip=10.0.38.113) #
+(RayTrainWorker pid=62753, ip=10.0.38.113) # Epoch = 0 to 999 (will continue afterwards), save every 5 epoch
+(RayTrainWorker pid=62753, ip=10.0.38.113) #
+(RayTrainWorker pid=62753, ip=10.0.38.113) # Each "epoch" = 200 steps, 17600 samples, 18022400 tokens
+(RayTrainWorker pid=62753, ip=10.0.38.113) #
+(RayTrainWorker pid=62753, ip=10.0.38.113) # Model = 24 n_layer, 2048 n_embd, 1024 ctx_len
+(RayTrainWorker pid=62753, ip=10.0.38.113) #
+(RayTrainWorker pid=62753, ip=10.0.38.113) # Adam = lr 1e-05 to 1e-05, warmup 0 steps, beta (0.9, 0.999), eps 1e-08
+(RayTrainWorker pid=62753, ip=10.0.38.113) #
+(RayTrainWorker pid=62753, ip=10.0.38.113) # Found torch 1.13.1+cu116, recommend 1.13.1+cu117 or newer
+(RayTrainWorker pid=62753, ip=10.0.38.113) # Found deepspeed 0.8.1, recommend 0.7.0 (faster than newer versions)
+(RayTrainWorker pid=62753, ip=10.0.38.113) # Found pytorch_lightning 1.9.3, recommend 1.9.1 or newer
+(RayTrainWorker pid=62753, ip=10.0.38.113) #
+(RayTrainWorker pid=62753, ip=10.0.38.113) ############################################################################
+(RayTrainWorker pid=62753, ip=10.0.38.113) 
+(RayTrainWorker pid=62753, ip=10.0.38.113) {'load_model': '/nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth', 'wandb': '', 'proj_dir': '/nvme/out', 'random_seed': -1, 'data_file': '/nvme/enwik8', 'data_type': 'utf-8', 'vocab_size': 50277, 'ctx_len': 1024, 'epoch_steps': 200, 'epoch_count': 1000, 'epoch_begin': 0, 'epoch_save': 5, 'micro_bsz': 11, 'n_layer': 24, 'n_embd': 2048, 'dim_att': 2048, 'dim_ffn': 8192, 'pre_ffn': 0, 'head_qk': 0, 'tiny_att_dim': 0, 'tiny_att_layer': -999, 'lr_init': 1e-05, 'lr_final': 1e-05, 'warmup_steps': 0, 'beta1': 0.9, 'beta2': 0.999, 'adam_eps': 1e-08, 'grad_cp': 1, 'my_pile_stage': 0, 'my_pile_shift': -1, 'my_pile_edecay': 0, 'layerwise_lr': 1, 'ds_bucket_mb': 200, 'my_img_version': 0, 'my_img_size': 0, 'my_img_bit': 0, 'my_img_clip': 'x', 'my_img_clip_scale': 1, 'my_img_l1_scale': 0, 'my_img_encoder': 'x', 'my_sample_len': 0, 'my_ffn_shift': 1, 'my_att_shift': 1, 'my_pos_emb': 0, 'load_partial': 0, 'magic_prime': 0, 'my_qa_mask': 0, 'my_testing': '', 'logger': False, 'enable_checkpointing': False, 'default_root_dir': None, 'gradient_clip_val': 1.0, 'gradient_clip_algorithm': None, 'num_nodes': 2, 'num_processes': None, 'devices': '4', 'gpus': None, 'auto_select_gpus': None, 'tpu_cores': None, 'ipus': None, 'enable_progress_bar': True, 'overfit_batches': 0.0, 'track_grad_norm': -1, 'check_val_every_n_epoch': 100000000000000000000, 'fast_dev_run': False, 'accumulate_grad_batches': None, 'max_epochs': -1, 'min_epochs': None, 'max_steps': -1, 'min_steps': None, 'max_time': None, 'limit_train_batches': None, 'limit_val_batches': None, 'limit_test_batches': None, 'limit_predict_batches': None, 'val_check_interval': None, 'log_every_n_steps': 100000000000000000000, 'accelerator': 'gpu', 'strategy': 'deepspeed_stage_2_offload', 'sync_batchnorm': False, 'precision': 'bf16', 'enable_model_summary': True, 'num_sanity_val_steps': 0, 'resume_from_checkpoint': None, 'profiler': None, 'benchmark': None, 'reload_dataloaders_every_n_epochs': 0, 'auto_lr_find': False, 'replace_sampler_ddp': False, 'detect_anomaly': False, 'auto_scale_batch_size': False, 'plugins': None, 'amp_backend': None, 'amp_level': None, 'move_metrics_to_cpu': False, 'multiple_trainloader_mode': 'max_size_cycle', 'inference_mode': True, 'my_timestamp': '2023-02-23-16-59-21', 'betas': (0.9, 0.999), 'real_bsz': 88, 'run_name': '50277 ctx1024 L24 D2048'}
+(RayTrainWorker pid=62753, ip=10.0.38.113) 
+(RayTrainWorker pid=162345) 
+(RayTrainWorker pid=162345) ############################################################################
+(RayTrainWorker pid=162345) #
+(RayTrainWorker pid=162345) # RWKV-4 BF16 on 2x4 GPU, bsz 2x4x11=88, deepspeed_stage_2_offload with grad_cp
+(RayTrainWorker pid=162345) #
+(RayTrainWorker pid=162345) # Data = /nvme/enwik8 (utf-8), ProjDir = /nvme/out
+(RayTrainWorker pid=162345) #
+(RayTrainWorker pid=162345) # Epoch = 0 to 999 (will continue afterwards), save every 5 epoch
+(RayTrainWorker pid=162345) #
+(RayTrainWorker pid=162345) # Each "epoch" = 200 steps, 17600 samples, 18022400 tokens
+(RayTrainWorker pid=162345) #
+(RayTrainWorker pid=162345) # Model = 24 n_layer, 2048 n_embd, 1024 ctx_len
+(RayTrainWorker pid=162345) #
+(RayTrainWorker pid=162345) # Adam = lr 1e-05 to 1e-05, warmup 0 steps, beta (0.9, 0.999), eps 1e-08
+(RayTrainWorker pid=162345) #
+(RayTrainWorker pid=162345) # Found torch 1.13.1+cu116, recommend 1.13.1+cu117 or newer
+(RayTrainWorker pid=162345) # Found deepspeed 0.8.1, recommend 0.7.0 (faster than newer versions)
+(RayTrainWorker pid=162345) # Found pytorch_lightning 1.9.3, recommend 1.9.1 or newer
+(RayTrainWorker pid=162345) #
+(RayTrainWorker pid=162345) ############################################################################
+(RayTrainWorker pid=162345) 
+(RayTrainWorker pid=162345) {'load_model': '/nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth', 'wandb': '', 'proj_dir': '/nvme/out', 'random_seed': -1, 'data_file': '/nvme/enwik8', 'data_type': 'utf-8', 'vocab_size': 50277, 'ctx_len': 1024, 'epoch_steps': 200, 'epoch_count': 1000, 'epoch_begin': 0, 'epoch_save': 5, 'micro_bsz': 11, 'n_layer': 24, 'n_embd': 2048, 'dim_att': 2048, 'dim_ffn': 8192, 'pre_ffn': 0, 'head_qk': 0, 'tiny_att_dim': 0, 'tiny_att_layer': -999, 'lr_init': 1e-05, 'lr_final': 1e-05, 'warmup_steps': 0, 'beta1': 0.9, 'beta2': 0.999, 'adam_eps': 1e-08, 'grad_cp': 1, 'my_pile_stage': 0, 'my_pile_shift': -1, 'my_pile_edecay': 0, 'layerwise_lr': 1, 'ds_bucket_mb': 200, 'my_img_version': 0, 'my_img_size': 0, 'my_img_bit': 0, 'my_img_clip': 'x', 'my_img_clip_scale': 1, 'my_img_l1_scale': 0, 'my_img_encoder': 'x', 'my_sample_len': 0, 'my_ffn_shift': 1, 'my_att_shift': 1, 'my_pos_emb': 0, 'load_partial': 0, 'magic_prime': 0, 'my_qa_mask': 0, 'my_testing': '', 'logger': False, 'enable_checkpointing': False, 'default_root_dir': None, 'gradient_clip_val': 1.0, 'gradient_clip_algorithm': None, 'num_nodes': 2, 'num_processes': None, 'devices': '4', 'gpus': None, 'auto_select_gpus': None, 'tpu_cores': None, 'ipus': None, 'enable_progress_bar': True, 'overfit_batches': 0.0, 'track_grad_norm': -1, 'check_val_every_n_epoch': 100000000000000000000, 'fast_dev_run': False, 'accumulate_grad_batches': None, 'max_epochs': -1, 'min_epochs': None, 'max_steps': -1, 'min_steps': None, 'max_time': None, 'limit_train_batches': None, 'limit_val_batches': None, 'limit_test_batches': None, 'limit_predict_batches': None, 'val_check_interval': None, 'log_every_n_steps': 100000000000000000000, 'accelerator': 'gpu', 'strategy': 'deepspeed_stage_2_offload', 'sync_batchnorm': False, 'precision': 'bf16', 'enable_model_summary': True, 'num_sanity_val_steps': 0, 'resume_from_checkpoint': None, 'profiler': None, 'benchmark': None, 'reload_dataloaders_every_n_epochs': 0, 'auto_lr_find': False, 'replace_sampler_ddp': False, 'detect_anomaly': False, 'auto_scale_batch_size': False, 'plugins': None, 'amp_backend': None, 'amp_level': None, 'move_metrics_to_cpu': False, 'multiple_trainloader_mode': 'max_size_cycle', 'inference_mode': True, 'my_timestamp': '2023-02-23-16-59-21', 'betas': (0.9, 0.999), 'real_bsz': 88, 'run_name': '50277 ctx1024 L24 D2048'}
+(RayTrainWorker pid=162345) 
+(RayTrainWorker pid=62752, ip=10.0.38.113) 
+(RayTrainWorker pid=62752, ip=10.0.38.113) ############################################################################
+(RayTrainWorker pid=62752, ip=10.0.38.113) #
+(RayTrainWorker pid=62752, ip=10.0.38.113) # RWKV-4 BF16 on 2x4 GPU, bsz 2x4x11=88, deepspeed_stage_2_offload with grad_cp
+(RayTrainWorker pid=62752, ip=10.0.38.113) #
+(RayTrainWorker pid=62752, ip=10.0.38.113) # Data = /nvme/enwik8 (utf-8), ProjDir = /nvme/out
+(RayTrainWorker pid=62752, ip=10.0.38.113) #
+(RayTrainWorker pid=62752, ip=10.0.38.113) # Epoch = 0 to 999 (will continue afterwards), save every 5 epoch
+(RayTrainWorker pid=62752, ip=10.0.38.113) #
+(RayTrainWorker pid=62752, ip=10.0.38.113) # Each "epoch" = 200 steps, 17600 samples, 18022400 tokens
+(RayTrainWorker pid=62752, ip=10.0.38.113) #
+(RayTrainWorker pid=62752, ip=10.0.38.113) # Model = 24 n_layer, 2048 n_embd, 1024 ctx_len
+(RayTrainWorker pid=62752, ip=10.0.38.113) #
+(RayTrainWorker pid=62752, ip=10.0.38.113) # Adam = lr 1e-05 to 1e-05, warmup 0 steps, beta (0.9, 0.999), eps 1e-08
+(RayTrainWorker pid=62752, ip=10.0.38.113) #
+(RayTrainWorker pid=62752, ip=10.0.38.113) # Found torch 1.13.1+cu116, recommend 1.13.1+cu117 or newer
+(RayTrainWorker pid=62752, ip=10.0.38.113) # Found deepspeed 0.8.1, recommend 0.7.0 (faster than newer versions)
+(RayTrainWorker pid=62752, ip=10.0.38.113) # Found pytorch_lightning 1.9.3, recommend 1.9.1 or newer
+(RayTrainWorker pid=62752, ip=10.0.38.113) #
+(RayTrainWorker pid=62752, ip=10.0.38.113) ############################################################################
+(RayTrainWorker pid=62752, ip=10.0.38.113) 
+(RayTrainWorker pid=62752, ip=10.0.38.113) {'load_model': '/nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth', 'wandb': '', 'proj_dir': '/nvme/out', 'random_seed': -1, 'data_file': '/nvme/enwik8', 'data_type': 'utf-8', 'vocab_size': 50277, 'ctx_len': 1024, 'epoch_steps': 200, 'epoch_count': 1000, 'epoch_begin': 0, 'epoch_save': 5, 'micro_bsz': 11, 'n_layer': 24, 'n_embd': 2048, 'dim_att': 2048, 'dim_ffn': 8192, 'pre_ffn': 0, 'head_qk': 0, 'tiny_att_dim': 0, 'tiny_att_layer': -999, 'lr_init': 1e-05, 'lr_final': 1e-05, 'warmup_steps': 0, 'beta1': 0.9, 'beta2': 0.999, 'adam_eps': 1e-08, 'grad_cp': 1, 'my_pile_stage': 0, 'my_pile_shift': -1, 'my_pile_edecay': 0, 'layerwise_lr': 1, 'ds_bucket_mb': 200, 'my_img_version': 0, 'my_img_size': 0, 'my_img_bit': 0, 'my_img_clip': 'x', 'my_img_clip_scale': 1, 'my_img_l1_scale': 0, 'my_img_encoder': 'x', 'my_sample_len': 0, 'my_ffn_shift': 1, 'my_att_shift': 1, 'my_pos_emb': 0, 'load_partial': 0, 'magic_prime': 0, 'my_qa_mask': 0, 'my_testing': '', 'logger': False, 'enable_checkpointing': False, 'default_root_dir': None, 'gradient_clip_val': 1.0, 'gradient_clip_algorithm': None, 'num_nodes': 2, 'num_processes': None, 'devices': '4', 'gpus': None, 'auto_select_gpus': None, 'tpu_cores': None, 'ipus': None, 'enable_progress_bar': True, 'overfit_batches': 0.0, 'track_grad_norm': -1, 'check_val_every_n_epoch': 100000000000000000000, 'fast_dev_run': False, 'accumulate_grad_batches': None, 'max_epochs': -1, 'min_epochs': None, 'max_steps': -1, 'min_steps': None, 'max_time': None, 'limit_train_batches': None, 'limit_val_batches': None, 'limit_test_batches': None, 'limit_predict_batches': None, 'val_check_interval': None, 'log_every_n_steps': 100000000000000000000, 'accelerator': 'gpu', 'strategy': 'deepspeed_stage_2_offload', 'sync_batchnorm': False, 'precision': 'bf16', 'enable_model_summary': True, 'num_sanity_val_steps': 0, 'resume_from_checkpoint': None, 'profiler': None, 'benchmark': None, 'reload_dataloaders_every_n_epochs': 0, 'auto_lr_find': False, 'replace_sampler_ddp': False, 'detect_anomaly': False, 'auto_scale_batch_size': False, 'plugins': None, 'amp_backend': None, 'amp_level': None, 'move_metrics_to_cpu': False, 'multiple_trainloader_mode': 'max_size_cycle', 'inference_mode': True, 'my_timestamp': '2023-02-23-16-59-21', 'betas': (0.9, 0.999), 'real_bsz': 88, 'run_name': '50277 ctx1024 L24 D2048'}
+(RayTrainWorker pid=62752, ip=10.0.38.113) 
+(RayTrainWorker pid=162348) 
+(RayTrainWorker pid=162348) ############################################################################
+(RayTrainWorker pid=162348) #
+(RayTrainWorker pid=162348) # RWKV-4 BF16 on 2x4 GPU, bsz 2x4x11=88, deepspeed_stage_2_offload with grad_cp
+(RayTrainWorker pid=162348) #
+(RayTrainWorker pid=162348) # Data = /nvme/enwik8 (utf-8), ProjDir = /nvme/out
+(RayTrainWorker pid=162348) #
+(RayTrainWorker pid=162348) # Epoch = 0 to 999 (will continue afterwards), save every 5 epoch
+(RayTrainWorker pid=162348) #
+(RayTrainWorker pid=162348) # Each "epoch" = 200 steps, 17600 samples, 18022400 tokens
+(RayTrainWorker pid=162348) #
+(RayTrainWorker pid=162348) # Model = 24 n_layer, 2048 n_embd, 1024 ctx_len
+(RayTrainWorker pid=162348) #
+(RayTrainWorker pid=162348) # Adam = lr 1e-05 to 1e-05, warmup 0 steps, beta (0.9, 0.999), eps 1e-08
+(RayTrainWorker pid=162348) #
+(RayTrainWorker pid=162348) # Found torch 1.13.1+cu116, recommend 1.13.1+cu117 or newer
+(RayTrainWorker pid=162348) # Found deepspeed 0.8.1, recommend 0.7.0 (faster than newer versions)
+(RayTrainWorker pid=162348) # Found pytorch_lightning 1.9.3, recommend 1.9.1 or newer
+(RayTrainWorker pid=162348) #
+(RayTrainWorker pid=162348) ############################################################################
+(RayTrainWorker pid=162348) 
+(RayTrainWorker pid=162348) {'load_model': '/nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth', 'wandb': '', 'proj_dir': '/nvme/out', 'random_seed': -1, 'data_file': '/nvme/enwik8', 'data_type': 'utf-8', 'vocab_size': 50277, 'ctx_len': 1024, 'epoch_steps': 200, 'epoch_count': 1000, 'epoch_begin': 0, 'epoch_save': 5, 'micro_bsz': 11, 'n_layer': 24, 'n_embd': 2048, 'dim_att': 2048, 'dim_ffn': 8192, 'pre_ffn': 0, 'head_qk': 0, 'tiny_att_dim': 0, 'tiny_att_layer': -999, 'lr_init': 1e-05, 'lr_final': 1e-05, 'warmup_steps': 0, 'beta1': 0.9, 'beta2': 0.999, 'adam_eps': 1e-08, 'grad_cp': 1, 'my_pile_stage': 0, 'my_pile_shift': -1, 'my_pile_edecay': 0, 'layerwise_lr': 1, 'ds_bucket_mb': 200, 'my_img_version': 0, 'my_img_size': 0, 'my_img_bit': 0, 'my_img_clip': 'x', 'my_img_clip_scale': 1, 'my_img_l1_scale': 0, 'my_img_encoder': 'x', 'my_sample_len': 0, 'my_ffn_shift': 1, 'my_att_shift': 1, 'my_pos_emb': 0, 'load_partial': 0, 'magic_prime': 0, 'my_qa_mask': 0, 'my_testing': '', 'logger': False, 'enable_checkpointing': False, 'default_root_dir': None, 'gradient_clip_val': 1.0, 'gradient_clip_algorithm': None, 'num_nodes': 2, 'num_processes': None, 'devices': '4', 'gpus': None, 'auto_select_gpus': None, 'tpu_cores': None, 'ipus': None, 'enable_progress_bar': True, 'overfit_batches': 0.0, 'track_grad_norm': -1, 'check_val_every_n_epoch': 100000000000000000000, 'fast_dev_run': False, 'accumulate_grad_batches': None, 'max_epochs': -1, 'min_epochs': None, 'max_steps': -1, 'min_steps': None, 'max_time': None, 'limit_train_batches': None, 'limit_val_batches': None, 'limit_test_batches': None, 'limit_predict_batches': None, 'val_check_interval': None, 'log_every_n_steps': 100000000000000000000, 'accelerator': 'gpu', 'strategy': 'deepspeed_stage_2_offload', 'sync_batchnorm': False, 'precision': 'bf16', 'enable_model_summary': True, 'num_sanity_val_steps': 0, 'resume_from_checkpoint': None, 'profiler': None, 'benchmark': None, 'reload_dataloaders_every_n_epochs': 0, 'auto_lr_find': False, 'replace_sampler_ddp': False, 'detect_anomaly': False, 'auto_scale_batch_size': False, 'plugins': None, 'amp_backend': None, 'amp_level': None, 'move_metrics_to_cpu': False, 'multiple_trainloader_mode': 'max_size_cycle', 'inference_mode': True, 'my_timestamp': '2023-02-23-16-59-21', 'betas': (0.9, 0.999), 'real_bsz': 88, 'run_name': '50277 ctx1024 L24 D2048'}
+(RayTrainWorker pid=162348) 
+(RayTrainWorker pid=62751, ip=10.0.38.113) 
+(RayTrainWorker pid=62751, ip=10.0.38.113) ############################################################################
+(RayTrainWorker pid=62751, ip=10.0.38.113) #
+(RayTrainWorker pid=62751, ip=10.0.38.113) # RWKV-4 BF16 on 2x4 GPU, bsz 2x4x11=88, deepspeed_stage_2_offload with grad_cp
+(RayTrainWorker pid=62751, ip=10.0.38.113) #
+(RayTrainWorker pid=62751, ip=10.0.38.113) # Data = /nvme/enwik8 (utf-8), ProjDir = /nvme/out
+(RayTrainWorker pid=62751, ip=10.0.38.113) #
+(RayTrainWorker pid=62751, ip=10.0.38.113) # Epoch = 0 to 999 (will continue afterwards), save every 5 epoch
+(RayTrainWorker pid=62751, ip=10.0.38.113) #
+(RayTrainWorker pid=62751, ip=10.0.38.113) # Each "epoch" = 200 steps, 17600 samples, 18022400 tokens
+(RayTrainWorker pid=62751, ip=10.0.38.113) #
+(RayTrainWorker pid=62751, ip=10.0.38.113) # Model = 24 n_layer, 2048 n_embd, 1024 ctx_len
+(RayTrainWorker pid=62751, ip=10.0.38.113) #
+(RayTrainWorker pid=62751, ip=10.0.38.113) # Adam = lr 1e-05 to 1e-05, warmup 0 steps, beta (0.9, 0.999), eps 1e-08
+(RayTrainWorker pid=62751, ip=10.0.38.113) #
+(RayTrainWorker pid=62751, ip=10.0.38.113) # Found torch 1.13.1+cu116, recommend 1.13.1+cu117 or newer
+(RayTrainWorker pid=62751, ip=10.0.38.113) # Found deepspeed 0.8.1, recommend 0.7.0 (faster than newer versions)
+(RayTrainWorker pid=62751, ip=10.0.38.113) # Found pytorch_lightning 1.9.3, recommend 1.9.1 or newer
+(RayTrainWorker pid=62751, ip=10.0.38.113) #
+(RayTrainWorker pid=62751, ip=10.0.38.113) ############################################################################
+(RayTrainWorker pid=62751, ip=10.0.38.113) 
+(RayTrainWorker pid=62751, ip=10.0.38.113) {'load_model': '/nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth', 'wandb': '', 'proj_dir': '/nvme/out', 'random_seed': -1, 'data_file': '/nvme/enwik8', 'data_type': 'utf-8', 'vocab_size': 50277, 'ctx_len': 1024, 'epoch_steps': 200, 'epoch_count': 1000, 'epoch_begin': 0, 'epoch_save': 5, 'micro_bsz': 11, 'n_layer': 24, 'n_embd': 2048, 'dim_att': 2048, 'dim_ffn': 8192, 'pre_ffn': 0, 'head_qk': 0, 'tiny_att_dim': 0, 'tiny_att_layer': -999, 'lr_init': 1e-05, 'lr_final': 1e-05, 'warmup_steps': 0, 'beta1': 0.9, 'beta2': 0.999, 'adam_eps': 1e-08, 'grad_cp': 1, 'my_pile_stage': 0, 'my_pile_shift': -1, 'my_pile_edecay': 0, 'layerwise_lr': 1, 'ds_bucket_mb': 200, 'my_img_version': 0, 'my_img_size': 0, 'my_img_bit': 0, 'my_img_clip': 'x', 'my_img_clip_scale': 1, 'my_img_l1_scale': 0, 'my_img_encoder': 'x', 'my_sample_len': 0, 'my_ffn_shift': 1, 'my_att_shift': 1, 'my_pos_emb': 0, 'load_partial': 0, 'magic_prime': 0, 'my_qa_mask': 0, 'my_testing': '', 'logger': False, 'enable_checkpointing': False, 'default_root_dir': None, 'gradient_clip_val': 1.0, 'gradient_clip_algorithm': None, 'num_nodes': 2, 'num_processes': None, 'devices': '4', 'gpus': None, 'auto_select_gpus': None, 'tpu_cores': None, 'ipus': None, 'enable_progress_bar': True, 'overfit_batches': 0.0, 'track_grad_norm': -1, 'check_val_every_n_epoch': 100000000000000000000, 'fast_dev_run': False, 'accumulate_grad_batches': None, 'max_epochs': -1, 'min_epochs': None, 'max_steps': -1, 'min_steps': None, 'max_time': None, 'limit_train_batches': None, 'limit_val_batches': None, 'limit_test_batches': None, 'limit_predict_batches': None, 'val_check_interval': None, 'log_every_n_steps': 100000000000000000000, 'accelerator': 'gpu', 'strategy': 'deepspeed_stage_2_offload', 'sync_batchnorm': False, 'precision': 'bf16', 'enable_model_summary': True, 'num_sanity_val_steps': 0, 'resume_from_checkpoint': None, 'profiler': None, 'benchmark': None, 'reload_dataloaders_every_n_epochs': 0, 'auto_lr_find': False, 'replace_sampler_ddp': False, 'detect_anomaly': False, 'auto_scale_batch_size': False, 'plugins': None, 'amp_backend': None, 'amp_level': None, 'move_metrics_to_cpu': False, 'multiple_trainloader_mode': 'max_size_cycle', 'inference_mode': True, 'my_timestamp': '2023-02-23-16-59-21', 'betas': (0.9, 0.999), 'real_bsz': 88, 'run_name': '50277 ctx1024 L24 D2048'}
+(RayTrainWorker pid=62751, ip=10.0.38.113) 
+(RayTrainWorker pid=162347) 
+(RayTrainWorker pid=162347) ############################################################################
+(RayTrainWorker pid=162347) #
+(RayTrainWorker pid=162347) # RWKV-4 BF16 on 2x4 GPU, bsz 2x4x11=88, deepspeed_stage_2_offload with grad_cp
+(RayTrainWorker pid=162347) #
+(RayTrainWorker pid=162347) # Data = /nvme/enwik8 (utf-8), ProjDir = /nvme/out
+(RayTrainWorker pid=162347) #
+(RayTrainWorker pid=162347) # Epoch = 0 to 999 (will continue afterwards), save every 5 epoch
+(RayTrainWorker pid=162347) #
+(RayTrainWorker pid=162347) # Each "epoch" = 200 steps, 17600 samples, 18022400 tokens
+(RayTrainWorker pid=162347) #
+(RayTrainWorker pid=162347) # Model = 24 n_layer, 2048 n_embd, 1024 ctx_len
+(RayTrainWorker pid=162347) #
+(RayTrainWorker pid=162347) # Adam = lr 1e-05 to 1e-05, warmup 0 steps, beta (0.9, 0.999), eps 1e-08
+(RayTrainWorker pid=162347) #
+(RayTrainWorker pid=162347) # Found torch 1.13.1+cu116, recommend 1.13.1+cu117 or newer
+(RayTrainWorker pid=162347) # Found deepspeed 0.8.1, recommend 0.7.0 (faster than newer versions)
+(RayTrainWorker pid=162347) # Found pytorch_lightning 1.9.3, recommend 1.9.1 or newer
+(RayTrainWorker pid=162347) #
+(RayTrainWorker pid=162347) ############################################################################
+(RayTrainWorker pid=162347) 
+(RayTrainWorker pid=162347) {'load_model': '/nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth', 'wandb': '', 'proj_dir': '/nvme/out', 'random_seed': -1, 'data_file': '/nvme/enwik8', 'data_type': 'utf-8', 'vocab_size': 50277, 'ctx_len': 1024, 'epoch_steps': 200, 'epoch_count': 1000, 'epoch_begin': 0, 'epoch_save': 5, 'micro_bsz': 11, 'n_layer': 24, 'n_embd': 2048, 'dim_att': 2048, 'dim_ffn': 8192, 'pre_ffn': 0, 'head_qk': 0, 'tiny_att_dim': 0, 'tiny_att_layer': -999, 'lr_init': 1e-05, 'lr_final': 1e-05, 'warmup_steps': 0, 'beta1': 0.9, 'beta2': 0.999, 'adam_eps': 1e-08, 'grad_cp': 1, 'my_pile_stage': 0, 'my_pile_shift': -1, 'my_pile_edecay': 0, 'layerwise_lr': 1, 'ds_bucket_mb': 200, 'my_img_version': 0, 'my_img_size': 0, 'my_img_bit': 0, 'my_img_clip': 'x', 'my_img_clip_scale': 1, 'my_img_l1_scale': 0, 'my_img_encoder': 'x', 'my_sample_len': 0, 'my_ffn_shift': 1, 'my_att_shift': 1, 'my_pos_emb': 0, 'load_partial': 0, 'magic_prime': 0, 'my_qa_mask': 0, 'my_testing': '', 'logger': False, 'enable_checkpointing': False, 'default_root_dir': None, 'gradient_clip_val': 1.0, 'gradient_clip_algorithm': None, 'num_nodes': 2, 'num_processes': None, 'devices': '4', 'gpus': None, 'auto_select_gpus': None, 'tpu_cores': None, 'ipus': None, 'enable_progress_bar': True, 'overfit_batches': 0.0, 'track_grad_norm': -1, 'check_val_every_n_epoch': 100000000000000000000, 'fast_dev_run': False, 'accumulate_grad_batches': None, 'max_epochs': -1, 'min_epochs': None, 'max_steps': -1, 'min_steps': None, 'max_time': None, 'limit_train_batches': None, 'limit_val_batches': None, 'limit_test_batches': None, 'limit_predict_batches': None, 'val_check_interval': None, 'log_every_n_steps': 100000000000000000000, 'accelerator': 'gpu', 'strategy': 'deepspeed_stage_2_offload', 'sync_batchnorm': False, 'precision': 'bf16', 'enable_model_summary': True, 'num_sanity_val_steps': 0, 'resume_from_checkpoint': None, 'profiler': None, 'benchmark': None, 'reload_dataloaders_every_n_epochs': 0, 'auto_lr_find': False, 'replace_sampler_ddp': False, 'detect_anomaly': False, 'auto_scale_batch_size': False, 'plugins': None, 'amp_backend': None, 'amp_level': None, 'move_metrics_to_cpu': False, 'multiple_trainloader_mode': 'max_size_cycle', 'inference_mode': True, 'my_timestamp': '2023-02-23-16-59-21', 'betas': (0.9, 0.999), 'real_bsz': 88, 'run_name': '50277 ctx1024 L24 D2048'}
+(RayTrainWorker pid=162347) 
+(RayTrainWorker pid=162346) 
+(RayTrainWorker pid=162346) ############################################################################
+(RayTrainWorker pid=162346) #
+(RayTrainWorker pid=162346) # RWKV-4 BF16 on 2x4 GPU, bsz 2x4x11=88, deepspeed_stage_2_offload with grad_cp
+(RayTrainWorker pid=162346) #
+(RayTrainWorker pid=162346) # Data = /nvme/enwik8 (utf-8), ProjDir = /nvme/out
+(RayTrainWorker pid=162346) #
+(RayTrainWorker pid=162346) # Epoch = 0 to 999 (will continue afterwards), save every 5 epoch
+(RayTrainWorker pid=162346) #
+(RayTrainWorker pid=162346) # Each "epoch" = 200 steps, 17600 samples, 18022400 tokens
+(RayTrainWorker pid=162346) #
+(RayTrainWorker pid=162346) # Model = 24 n_layer, 2048 n_embd, 1024 ctx_len
+(RayTrainWorker pid=162346) #
+(RayTrainWorker pid=162346) # Adam = lr 1e-05 to 1e-05, warmup 0 steps, beta (0.9, 0.999), eps 1e-08
+(RayTrainWorker pid=162346) #
+(RayTrainWorker pid=162346) # Found torch 1.13.1+cu116, recommend 1.13.1+cu117 or newer
+(RayTrainWorker pid=162346) # Found deepspeed 0.8.1, recommend 0.7.0 (faster than newer versions)
+(RayTrainWorker pid=162346) # Found pytorch_lightning 1.9.3, recommend 1.9.1 or newer
+(RayTrainWorker pid=162346) #
+(RayTrainWorker pid=162346) ############################################################################
+(RayTrainWorker pid=162346) 
+(RayTrainWorker pid=162346) {'load_model': '/nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth', 'wandb': '', 'proj_dir': '/nvme/out', 'random_seed': -1, 'data_file': '/nvme/enwik8', 'data_type': 'utf-8', 'vocab_size': 50277, 'ctx_len': 1024, 'epoch_steps': 200, 'epoch_count': 1000, 'epoch_begin': 0, 'epoch_save': 5, 'micro_bsz': 11, 'n_layer': 24, 'n_embd': 2048, 'dim_att': 2048, 'dim_ffn': 8192, 'pre_ffn': 0, 'head_qk': 0, 'tiny_att_dim': 0, 'tiny_att_layer': -999, 'lr_init': 1e-05, 'lr_final': 1e-05, 'warmup_steps': 0, 'beta1': 0.9, 'beta2': 0.999, 'adam_eps': 1e-08, 'grad_cp': 1, 'my_pile_stage': 0, 'my_pile_shift': -1, 'my_pile_edecay': 0, 'layerwise_lr': 1, 'ds_bucket_mb': 200, 'my_img_version': 0, 'my_img_size': 0, 'my_img_bit': 0, 'my_img_clip': 'x', 'my_img_clip_scale': 1, 'my_img_l1_scale': 0, 'my_img_encoder': 'x', 'my_sample_len': 0, 'my_ffn_shift': 1, 'my_att_shift': 1, 'my_pos_emb': 0, 'load_partial': 0, 'magic_prime': 0, 'my_qa_mask': 0, 'my_testing': '', 'logger': False, 'enable_checkpointing': False, 'default_root_dir': None, 'gradient_clip_val': 1.0, 'gradient_clip_algorithm': None, 'num_nodes': 2, 'num_processes': None, 'devices': '4', 'gpus': None, 'auto_select_gpus': None, 'tpu_cores': None, 'ipus': None, 'enable_progress_bar': True, 'overfit_batches': 0.0, 'track_grad_norm': -1, 'check_val_every_n_epoch': 100000000000000000000, 'fast_dev_run': False, 'accumulate_grad_batches': None, 'max_epochs': -1, 'min_epochs': None, 'max_steps': -1, 'min_steps': None, 'max_time': None, 'limit_train_batches': None, 'limit_val_batches': None, 'limit_test_batches': None, 'limit_predict_batches': None, 'val_check_interval': None, 'log_every_n_steps': 100000000000000000000, 'accelerator': 'gpu', 'strategy': 'deepspeed_stage_2_offload', 'sync_batchnorm': False, 'precision': 'bf16', 'enable_model_summary': True, 'num_sanity_val_steps': 0, 'resume_from_checkpoint': None, 'profiler': None, 'benchmark': None, 'reload_dataloaders_every_n_epochs': 0, 'auto_lr_find': False, 'replace_sampler_ddp': False, 'detect_anomaly': False, 'auto_scale_batch_size': False, 'plugins': None, 'amp_backend': None, 'amp_level': None, 'move_metrics_to_cpu': False, 'multiple_trainloader_mode': 'max_size_cycle', 'inference_mode': True, 'my_timestamp': '2023-02-23-16-59-21', 'betas': (0.9, 0.999), 'real_bsz': 88, 'run_name': '50277 ctx1024 L24 D2048'}
+(RayTrainWorker pid=162346) 
+(RayTrainWorker pid=162345) Building token list...
+(RayTrainWorker pid=162348) Building token list...
+(RayTrainWorker pid=162347) Building token list...
+(RayTrainWorker pid=162346) Building token list...
+(RayTrainWorker pid=62754, ip=10.0.38.113) Building token list...
+(RayTrainWorker pid=62753, ip=10.0.38.113) Building token list...
+(RayTrainWorker pid=62752, ip=10.0.38.113) Building token list...
+(RayTrainWorker pid=62751, ip=10.0.38.113) Building token list...
+(RayTrainWorker pid=162345) RWKV_MY_TESTING 
+(RayTrainWorker pid=162345) Data has 99621832 tokens, 6064 vocab size.
+(RayTrainWorker pid=162348) RWKV_MY_TESTING 
+(RayTrainWorker pid=162348) Data has 99621832 tokens, 6064 vocab size.
+(RayTrainWorker pid=162346) RWKV_MY_TESTING 
+(RayTrainWorker pid=162346) Data has 99621832 tokens, 6064 vocab size.
+(RayTrainWorker pid=62753, ip=10.0.38.113) RWKV_MY_TESTING 
+(RayTrainWorker pid=62754, ip=10.0.38.113) Data has 99621832 tokens, 6064 vocab size.
+(RayTrainWorker pid=62754, ip=10.0.38.113) RWKV_MY_TESTING 
+(RayTrainWorker pid=62753, ip=10.0.38.113) Data has 99621832 tokens, 6064 vocab size.
+(RayTrainWorker pid=62752, ip=10.0.38.113) RWKV_MY_TESTING 
+(RayTrainWorker pid=62752, ip=10.0.38.113) Data has 99621832 tokens, 6064 vocab size.
+(RayTrainWorker pid=162347) RWKV_MY_TESTING 
+(RayTrainWorker pid=162347) Data has 99621832 tokens, 6064 vocab size.
+(RayTrainWorker pid=62751, ip=10.0.38.113) RWKV_MY_TESTING 
+(RayTrainWorker pid=62751, ip=10.0.38.113) Data has 99621832 tokens, 6064 vocab size.
+(RayTrainWorker pid=62754, ip=10.0.38.113) Using /home/ray/.cache/torch_extensions/py38_cu116 as PyTorch extensions root...
+(RayTrainWorker pid=62753, ip=10.0.38.113) Using /home/ray/.cache/torch_extensions/py38_cu116 as PyTorch extensions root...
+(RayTrainWorker pid=62752, ip=10.0.38.113) Using /home/ray/.cache/torch_extensions/py38_cu116 as PyTorch extensions root...
+(RayTrainWorker pid=162345) Using /home/ray/.cache/torch_extensions/py38_cu116 as PyTorch extensions root...
+(RayTrainWorker pid=162348) Using /home/ray/.cache/torch_extensions/py38_cu116 as PyTorch extensions root...
+(RayTrainWorker pid=162347) Using /home/ray/.cache/torch_extensions/py38_cu116 as PyTorch extensions root...
+(RayTrainWorker pid=162346) Using /home/ray/.cache/torch_extensions/py38_cu116 as PyTorch extensions root...
+(RayTrainWorker pid=62751, ip=10.0.38.113) Using /home/ray/.cache/torch_extensions/py38_cu116 as PyTorch extensions root...
+(RayTrainWorker pid=162345) Detected CUDA files, patching ldflags
+(RayTrainWorker pid=162345) Emitting ninja build file /home/ray/.cache/torch_extensions/py38_cu116/wkv_1024/build.ninja...
+(RayTrainWorker pid=162345) Building extension module wkv_1024...
+(RayTrainWorker pid=162345) Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+(RayTrainWorker pid=162345) ninja: no work to do.
+(RayTrainWorker pid=162345) Loading extension module wkv_1024...
+(RayTrainWorker pid=162347) Loading extension module wkv_1024...
+(RayTrainWorker pid=162348) Loading extension module wkv_1024...
+(RayTrainWorker pid=162346) Loading extension module wkv_1024...
+== Status ==
+Current time: 2023-02-23 16:59:25 (running for 00:00:35.20)
+Memory usage on this node: 13.8/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 16:59:30 (running for 00:00:40.20)
+Memory usage on this node: 24.7/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+(RayTrainWorker pid=162345) ########## Loading /nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth... ##########
+(RayTrainWorker pid=162347) ########## Loading /nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth... ##########
+(RayTrainWorker pid=162348) ########## Loading /nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth... ##########
+(RayTrainWorker pid=162346) ########## Loading /nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth... ##########
+== Status ==
+Current time: 2023-02-23 16:59:35 (running for 00:00:45.20)
+Memory usage on this node: 44.0/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+(RayTrainWorker pid=162345) 50277 2048  emb.weight
+(RayTrainWorker pid=162345) 2048        blocks.0.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.0.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.0.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.0.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.0.ln0.weight
+(RayTrainWorker pid=162345) 2048        blocks.0.ln0.bias
+(RayTrainWorker pid=162345) 2048        blocks.0.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.0.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.0.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.0.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.0.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.0.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.0.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.0.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.0.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.0.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.0.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.0.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.0.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.0.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.1.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.1.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.1.ln2.weight
+(RayTrainWorker pid=162345) GPU available: True (cuda), used: True
+(RayTrainWorker pid=162345) TPU available: False, using: 0 TPU cores
+(RayTrainWorker pid=162345) IPU available: False, using: 0 IPUs
+(RayTrainWorker pid=162345) HPU available: False, using: 0 HPUs
+(RayTrainWorker pid=162345) 2048        blocks.1.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.1.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.1.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.1.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.1.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.1.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.1.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.1.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.1.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.1.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.1.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.1.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.1.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.1.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.1.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.2.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.2.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.2.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.2.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.2.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.2.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.2.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.2.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.2.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.2.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.2.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.2.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.2.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.2.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.2.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.2.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.2.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.2.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.3.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.3.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.3.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.3.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.3.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.3.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.3.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.3.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.3.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.3.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.3.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.3.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.3.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.3.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.3.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.3.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.3.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.3.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.4.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.4.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.4.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.4.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.4.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.4.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.4.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.4.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.4.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.4.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.4.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.4.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.4.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.4.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.4.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.4.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.4.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.4.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.5.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.5.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.5.ln2.weight
+(RayTrainWorker pid=162348) initializing deepspeed distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+(RayTrainWorker pid=162347) initializing deepspeed distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+(RayTrainWorker pid=162345) 2048        blocks.5.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.5.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.5.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.5.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.5.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.5.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.5.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.5.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.5.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.5.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.5.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.5.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.5.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.5.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.5.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.6.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.6.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.6.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.6.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.6.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.6.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.6.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.6.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.6.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.6.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.6.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.6.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.6.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.6.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.6.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.6.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.6.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.6.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.7.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.7.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.7.ln2.weight
+(RayTrainWorker pid=162346) initializing deepspeed distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+(RayTrainWorker pid=162345) 2048        blocks.7.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.7.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.7.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.7.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.7.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.7.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.7.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.7.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.7.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.7.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.7.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.7.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.7.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.7.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.7.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.8.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.8.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.8.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.8.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.8.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.8.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.8.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.8.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.8.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.8.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.8.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.8.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.8.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.8.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.8.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.8.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.8.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.8.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.9.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.9.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.9.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.9.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.9.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.9.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.9.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.9.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.9.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.9.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.9.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.9.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.9.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.9.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.9.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.9.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.9.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.9.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.10.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.10.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.10.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.10.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.10.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.10.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.10.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.10.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.10.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.10.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.10.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.10.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.10.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.10.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.10.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.10.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.10.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.10.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.11.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.11.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.11.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.11.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.11.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.11.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.11.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.11.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.11.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.11.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.11.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.11.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.11.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.11.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.11.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.11.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.11.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.11.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.12.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.12.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.12.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.12.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.12.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.12.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.12.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.12.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.12.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.12.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.12.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.12.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.12.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.12.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.12.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.12.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.12.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.12.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.13.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.13.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.13.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.13.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.13.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.13.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.13.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.13.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.13.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.13.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.13.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.13.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.13.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.13.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.13.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.13.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.13.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.13.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.14.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.14.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.14.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.14.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.14.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.14.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.14.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.14.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.14.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.14.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.14.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.14.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.14.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.14.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.14.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.14.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.14.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.14.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.15.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.15.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.15.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.15.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.15.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.15.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.15.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.15.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.15.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.15.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.15.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.15.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.15.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.15.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.15.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.15.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.15.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.15.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.16.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.16.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.16.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.16.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.16.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.16.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.16.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.16.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.16.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.16.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.16.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.16.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.16.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.16.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.16.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.16.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.16.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.16.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.17.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.17.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.17.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.17.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.17.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.17.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.17.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.17.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.17.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.17.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.17.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.17.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.17.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.17.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.17.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.17.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.17.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.17.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.18.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.18.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.18.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.18.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.18.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.18.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.18.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.18.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.18.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.18.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.18.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.18.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.18.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.18.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.18.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.18.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.18.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.18.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.19.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.19.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.19.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.19.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.19.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.19.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.19.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.19.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.19.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.19.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.19.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.19.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.19.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.19.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.19.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.19.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.19.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.19.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.20.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.20.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.20.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.20.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.20.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.20.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.20.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.20.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.20.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.20.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.20.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.20.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.20.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.20.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.20.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.20.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.20.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.20.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.21.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.21.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.21.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.21.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.21.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.21.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.21.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.21.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.21.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.21.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.21.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.21.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.21.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.21.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.21.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.21.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.21.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.21.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.22.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.22.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.22.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.22.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.22.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.22.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.22.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.22.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.22.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.22.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.22.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.22.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.22.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.22.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.22.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.22.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.22.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.22.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        blocks.23.ln1.weight
+(RayTrainWorker pid=162345) 2048        blocks.23.ln1.bias
+(RayTrainWorker pid=162345) 2048        blocks.23.ln2.weight
+(RayTrainWorker pid=162345) 2048        blocks.23.ln2.bias
+(RayTrainWorker pid=162345) 2048        blocks.23.att.time_decay
+(RayTrainWorker pid=162345) 2048        blocks.23.att.time_first
+(RayTrainWorker pid=162345) 2048        blocks.23.att.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.23.att.time_mix_v
+(RayTrainWorker pid=162345) 2048        blocks.23.att.time_mix_r
+(RayTrainWorker pid=162345) 2048  2048  blocks.23.att.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.23.att.value.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.23.att.receptance.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.23.att.output.weight
+(RayTrainWorker pid=162345) 2048        blocks.23.ffn.time_mix_k
+(RayTrainWorker pid=162345) 2048        blocks.23.ffn.time_mix_r
+(RayTrainWorker pid=162345) 8192  2048  blocks.23.ffn.key.weight
+(RayTrainWorker pid=162345) 2048  2048  blocks.23.ffn.receptance.weight
+(RayTrainWorker pid=162345) 2048  8192  blocks.23.ffn.value.weight
+(RayTrainWorker pid=162345) 2048        ln_out.weight
+(RayTrainWorker pid=162345) 2048        ln_out.bias
+(RayTrainWorker pid=162345) 50277 2048  head.weight
+(RayTrainWorker pid=162345) initializing deepspeed distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+(RayTrainWorker pid=162345) Enabling DeepSpeed BF16.
+== Status ==
+Current time: 2023-02-23 16:59:40 (running for 00:00:50.21)
+Memory usage on this node: 51.4/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 16:59:45 (running for 00:00:55.21)
+Memory usage on this node: 51.4/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 16:59:50 (running for 00:01:00.21)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 16:59:55 (running for 00:01:05.21)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:00 (running for 00:01:10.22)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:05 (running for 00:01:15.22)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:10 (running for 00:01:20.22)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:15 (running for 00:01:25.22)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:20 (running for 00:01:30.23)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:25 (running for 00:01:35.23)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:30 (running for 00:01:40.23)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:35 (running for 00:01:45.24)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:40 (running for 00:01:50.24)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:45 (running for 00:01:55.24)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:50 (running for 00:02:00.24)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:00:55 (running for 00:02:05.25)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:01:00 (running for 00:02:10.25)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:01:05 (running for 00:02:15.25)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
+== Status ==
+Current time: 2023-02-23 17:01:10 (running for 00:02:20.25)
+Memory usage on this node: 51.5/186.7 GiB 
+Using FIFO scheduling algorithm.
+Resources requested: 1.0/96 CPUs, 8.0/8 GPUs, 0.0/249.57 GiB heap, 0.0/110.95 GiB objects (0.0/2.0 accelerator_type:A10G)
+Result logdir: /home/ray/ray_results/TorchTrainer_2023-02-23_16-58-50
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+------------------+
+| Trial name               | status   | loc              |
+|--------------------------+----------+------------------|
+| TorchTrainer_6694f_00000 | RUNNING  | 10.0.7.85:161702 |
++--------------------------+----------+------------------+
+
+
