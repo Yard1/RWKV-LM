@@ -1,5 +1,7 @@
 #/bin/bash
 
+pip uninstall -y deepspeed && pip install -U --user deepspeed
+
 cd ./RWKV-v4neo
 # WANDB IS NOT YET WORKING!
 python train.py --load_model "/nvme/rwkv-4-pile-1b5/RWKV-4-Pile-1B5-20220903-8040.pth" --wandb "" --proj_dir "/nvme/out" \

@@ -45,7 +45,7 @@ def download_pile_remote(dataset_name):
        "cd ~/; git clone https://github.com/Yard1/gpt-neox.git;", shell=True
     )
     subprocess.run(
-       f"cd ~/; cd gpt-neox; echo 'starting dataset download {dataset_name}'; python prepare_data.py {dataset_name} -d /nvme/data/pile -t HFTokenizer --vocab-file '/mnt/cluster_storage/20B_tokenizer.json' && echo 'download complete' && ls /nvme/data/pile", shell=True, check=True
+       f"cd ~/; cd gpt-neox; echo 'starting dataset download {dataset_name}'; python prepare_data.py {dataset_name} -d /nvme/data/pile -t HFTokenizer --vocab-file '/mnt/cluster_storage/20B_tokenizer.json' && echo 'download complete'", shell=True, check=True
     )
 
 def download_pile(dataset_name):
@@ -53,11 +53,13 @@ def download_pile(dataset_name):
         # Necessary for gpt-neox tokenizer to work
         "pip uninstall -y deepspeed && pip install --user -U git+https://github.com/EleutherAI/DeeperSpeed.git@eb7f5cff36678625d23db8a8fe78b4a93e5d2c75#egg=deepspeed", shell=True
     )
-    run_on_every_node(download_pile_remote, dataset_name=dataset_name)
-    subprocess.run(
-        # Use latest deepspeed for actual training. Will crash otherwise
-        "pip uninstall -y deepspeed && pip install -U --user deepspeed", shell=True
-    )
+    try:
+        run_on_every_node(download_pile_remote, dataset_name=dataset_name)
+    finally:
+        subprocess.run(
+            # Use latest deepspeed for actual training. Will crash otherwise
+            "pip uninstall -y deepspeed && pip install -U --user deepspeed", shell=True
+        )
 
 @ray.remote(num_gpus=1)
 def clean_cache():
