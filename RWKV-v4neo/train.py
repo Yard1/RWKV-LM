@@ -1,7 +1,9 @@
 ########################################################################################################
 # The RWKV Language Model - https://github.com/BlinkDL/RWKV-LM
+
+# Edited to work with Ray Train
 ########################################################################################################
-import os, warnings, math, datetime, sys, time, shutil
+import os, warnings, datetime, shutil
 from argparse import ArgumentParser
 from lightning_fabric.plugins.environments.lightning import LightningEnvironment
 from pytorch_lightning import Trainer
@@ -40,7 +42,7 @@ class RayEnvironment(LightningEnvironment):
 
 def run(config):
     args = config["args"]
-    args.num_nodes = 2
+    args.devices = session.get_local_world_size()
 
     import numpy as np
     import torch
@@ -50,7 +52,7 @@ def run(config):
     from pytorch_lightning import seed_everything
 
     if args.random_seed >= 0:
-        print(
+        rank_zero_info(
             f"########## WARNING: GLOBAL SEED {args.random_seed} THIS WILL AFFECT MULTIGPU SAMPLING ##########\n"
             * 3
         )
@@ -244,7 +246,7 @@ def run(config):
         init_weight_name = f"{args.proj_dir}/rwkv-init.pth"
         with FileLock(f"{args.proj_dir}/rwkv-init.lock"):
             if not os.path.exists(f"{args.proj_dir}/rwkv-init.pth"):
-                print("generating initial weights")
+                rank_zero_info("generating initial weights")
                 generate_init_weight(model, init_weight_name)  # save initial weights
         args.load_model = init_weight_name
 
@@ -260,7 +262,7 @@ def run(config):
             else:
                 args.load_model = f"{args.proj_dir}/rwkv-{max_p}.pth"
             args.epoch_begin = max_p + 1
-            print(f"Trying {args.load_model}")
+            rank_zero_info(f"Trying {args.load_model}")
             load_dict = torch.load(args.load_model, map_location="cpu")
 
     if args.load_partial == 1:
@@ -270,6 +272,10 @@ def run(config):
                 load_dict[k] = model.state_dict()[k]
     model.load_state_dict(load_dict)
 
+    # Monkey-patch pytorch-lightning trainer:
+    # 1. Make sure root_device is the same as ray.train.torch.get_device
+    # 2. Do not overridde node environment variables in DeepSpeedStrategy
+    # 3. Replace default LightningEnviroment with our RayEnvironment (top of the file) ensuring that rank indices match
     with patch(
         "pytorch_lightning.strategies.ddp.DDPStrategy.root_device",
         property(lambda self: get_device()),
@@ -326,7 +332,7 @@ if __name__ == "__main__":
     # --ctx_len 128 --epoch_steps 1000 --epoch_count 20 --epoch_begin 0 --epoch_save 10 \
     # --micro_bsz 16 --n_layer 12 --n_embd 768 --pre_ffn 0 --head_qk 0 \
     # --lr_init 6e-4 --lr_final 1e-5 --warmup_steps 0 --beta1 0.9 --beta2 0.99 --adam_eps 1e-8 \
-    # --accelerator gpu --devices 1 --precision bf16 --strategy ddp_find_unused_parameters_false --grad_cp 0
+    # --accelerator gpu --precision bf16 --strategy ddp_find_unused_parameters_false --grad_cp 0
 
     # example: train a simple L6-D512 RWKV from scratch on enwik8
     #
@@ -335,7 +341,7 @@ if __name__ == "__main__":
     # --ctx_len 512 --epoch_steps 5000 --epoch_count 500 --epoch_begin 0 --epoch_save 5 \
     # --micro_bsz 12 --n_layer 6 --n_embd 512 --pre_ffn 0 --head_qk 0 \
     # --lr_init 8e-4 --lr_final 1e-5 --warmup_steps 0 --beta1 0.9 --beta2 0.99 --adam_eps 1e-8 \
-    # --accelerator gpu --devices 1 --precision bf16 --strategy ddp_find_unused_parameters_false --grad_cp 0
+    # --accelerator gpu --precision bf16 --strategy ddp_find_unused_parameters_false --grad_cp 0
 
     # example: fine-tune RWKV 1.5B using 8xA100 40G = 1.76it/s = 115k token/s, VRAM 37477M
     #
@@ -344,7 +350,7 @@ if __name__ == "__main__":
     # --ctx_len 1024 --epoch_steps 1000 --epoch_count 1000 --epoch_begin 0 --epoch_save 5 \
     # --micro_bsz 8 --n_layer 24 --n_embd 2048 --pre_ffn 0 --head_qk 0 \
     # --lr_init 1e-5 --lr_final 1e-5 --warmup_steps 0 --beta1 0.9 --beta2 0.999 --adam_eps 1e-8 \
-    # --accelerator gpu --devices 8 --precision bf16 --strategy deepspeed_stage_2 --grad_cp 0
+    # --accelerator gpu --precision bf16 --strategy deepspeed_stage_2 --grad_cp 0
 
     # example: fine-tune RWKV 1.5B using 1 GPU fp16 (VRAM 16G) NOTE: fp16 might overflow
     #
@@ -353,7 +359,7 @@ if __name__ == "__main__":
     # --ctx_len 1024 --epoch_steps 200 --epoch_count 1000 --epoch_begin 0 --epoch_save 1 \
     # --micro_bsz 11 --n_layer 24 --n_embd 2048 --pre_ffn 0 --head_qk 0 \
     # --lr_init 1e-5 --lr_final 1e-5 --warmup_steps 0 --beta1 0.9 --beta2 0.999 --adam_eps 1e-8 \
-    # --accelerator gpu --devices 1 --precision fp16 --strategy deepspeed_stage_2_offload --grad_cp 1
+    # --accelerator gpu --precision fp16 --strategy deepspeed_stage_2_offload --grad_cp 1
 
     parser = ArgumentParser()
 
@@ -452,9 +458,18 @@ if __name__ == "__main__":
     ########################################################################################################
 
     ray.init(runtime_env={"working_dir": os.path.dirname(__file__)})
+
+    num_gpus = 0
+    num_gpu_nodes = 0
+    for node in ray.nodes():
+        if node["Alive"] and node["Resources"].get("GPU", None):
+            num_gpu_nodes += 1
+            num_gpus += node["Resources"].get("GPU", 0)
+    args.num_nodes = num_gpu_nodes
+
     trainer = TorchTrainer(
         run,
         train_loop_config={"args": args},
-        scaling_config=ScalingConfig(num_workers=8, use_gpu=True),
+        scaling_config=ScalingConfig(num_workers=num_gpus, use_gpu=True),
     )
     trainer.fit()

@@ -1,5 +1,5 @@
 import os, math, time, datetime, subprocess
-from ray.air import session
+from ray.air import Checkpoint, session
 import torch
 from torch.utils.data import DataLoader
 import pytorch_lightning as pl
@@ -128,8 +128,10 @@ class train_callback(pl.Callback):
 
     def on_train_epoch_end(self, trainer, pl_module):
         args = self.args
-        if trainer.is_global_zero:  # logging & save state_dict
-            if (args.epoch_save > 0 and trainer.current_epoch % args.epoch_save == 0) or trainer.current_epoch == args.epoch_count - 1:
+        cp = None
+        if (args.epoch_save > 0 and trainer.current_epoch % args.epoch_save == 0) or trainer.current_epoch == args.epoch_count - 1:
+            cp = Checkpoint.from_dict({"dummy": "dummy"})
+            if trainer.is_global_zero:  # logging & save state_dict
                 if args.data_type == 'wds_img':
                     raw_dict = pl_module.state_dict()
                     to_save_dict = {}
@@ -139,14 +141,21 @@ class train_callback(pl.Callback):
                 else:
                     to_save_dict = pl_module.state_dict()
                 try:
+                    save_path = f"{args.proj_dir}/checkpoint-{args.epoch_begin + trainer.current_epoch}"
+                    os.makedirs(save_path, exist_ok=True)
                     my_save(
                         to_save_dict,
-                        f"{args.proj_dir}/rwkv-{args.epoch_begin + trainer.current_epoch}.pth",
+                        f"{save_path}/rwkv.pth",
                     )
+                    cp = Checkpoint.from_directory(save_path)
                 except Exception as e:
                     print('Error\n\n', e, '\n\n')
-            trainer.my_log.write(f"{args.epoch_begin + trainer.current_epoch} {trainer.my_epoch_loss:.6f} {math.exp(trainer.my_epoch_loss):.4f} {trainer.my_lr:.8f} {datetime.datetime.now()} {trainer.current_epoch}\n")
-            trainer.my_log.flush()
+            if trainer.is_global_zero:
+                trainer.my_log.write(f"{args.epoch_begin + trainer.current_epoch} {trainer.my_epoch_loss:.6f} {math.exp(trainer.my_epoch_loss):.4f} {trainer.my_lr:.8f} {datetime.datetime.now()} {trainer.current_epoch}\n")
+                trainer.my_log.flush()
+            token_per_step = args.ctx_len * args.real_bsz
+            real_step = trainer.global_step + args.epoch_begin * args.epoch_steps
+            session.report({"loss": trainer.my_epoch_loss, "lr": trainer.my_lr,  "Gtokens": real_step * token_per_step / 1e9}, checkpoint=cp)
 
         trainer.my_loss_sum = 0
         trainer.my_loss_count = 0
