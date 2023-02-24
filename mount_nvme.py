@@ -34,7 +34,7 @@ def test():
 @ray.remote(num_gpus=1)
 def prec():
    #subprocess.run("cp -r /mnt/cluster_storage/TorchTrainer_2023-02-21_15-52-40/TorchTrainer_d3578_00000_0_2023-02-21_15-52-41/checkpoint_000000 /nvme", shell=True, check=True)
-    subprocess.run("cd /nvme; wget https://data.deepai.org/enwik8.zip && unzip enwik8.zip; ls", shell=True, check=True)
+    subprocess.run("cd /nvme; wget https://data.deepai.org/enwik8.zip && unzip enwik8.zip; rm enwik8.zip; ls", shell=True, check=True)
 
 @ray.remote(num_gpus=1)
 def download_model():
@@ -46,4 +46,5 @@ def download_model():
 
 if __name__ == "__main__":
     ray.init()
+    run_on_every_node(prec)
     run_on_every_node(download_model)
