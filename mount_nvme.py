@@ -43,8 +43,18 @@ def download_model():
    #subprocess.run("cp -r /mnt/cluster_storage/TorchTrainer_2023-02-21_15-52-40/TorchTrainer_d3578_00000_0_2023-02-21_15-52-41/checkpoint_000000 /nvme", shell=True, check=True)
     subprocess.run(f"cd /nvme; git lfs clone {base_model_url}; ls '{base_model_name.lower()}'", shell=True, check=True)
 
-
+@ray.remote(num_gpus=1)
+def download_pile():
+    subprocess.run(
+        "ls /nvme/data/pile/enron", shell=True, check=True
+    )
+    #subprocess.run(
+    #    "rm -rf /nvme/data/pile/enron", shell=True, check=True
+    #)
+    #subprocess.run(
+    #    "cd ~/; cd gpt-neox; python prepare_data.py -d /nvme/data/pile -t HFTokenizer --vocab-file '/mnt/cluster_storage/20B_tokenizer.json'", shell=True, check=True
+    #)
 if __name__ == "__main__":
     ray.init()
-    run_on_every_node(prec)
-    run_on_every_node(download_model)
+    run_on_every_node(download_pile)
+
