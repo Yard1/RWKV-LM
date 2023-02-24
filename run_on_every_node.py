@@ -45,7 +45,7 @@ def download_pile_remote(dataset_name):
        "cd ~/; git clone https://github.com/Yard1/gpt-neox.git;", shell=True
     )
     subprocess.run(
-       f"cd ~/; cd gpt-neox; echo 'starting download'; python prepare_data.py {dataset_name} -d /nvme/data/pile -t HFTokenizer --vocab-file '/mnt/cluster_storage/20B_tokenizer.json' && ls /nvme/data/pile", shell=True, check=True
+       f"cd ~/; cd gpt-neox; echo 'starting dataset download {dataset_name}'; python prepare_data.py {dataset_name} -d /nvme/data/pile -t HFTokenizer --vocab-file '/mnt/cluster_storage/20B_tokenizer.json' && echo 'download complete' && ls /nvme/data/pile", shell=True, check=True
     )
 
 def download_pile(dataset_name):
