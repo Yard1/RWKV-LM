@@ -27,6 +27,13 @@ class RayEnvironment(LightningEnvironment):
     def node_rank(self) -> int:
         return session.get_node_rank()
 
+    def set_world_size(self, size: int) -> None:
+        self._world_size = session.get_world_size()
+
+    def set_global_rank(self, rank: int) -> None:
+        self._global_rank = session.get_world_rank()
+        rank_zero_only.rank = rank
+
     def teardown(self):
         pass
 
@@ -237,14 +244,15 @@ def run(config):
         init_weight_name = f"{args.proj_dir}/rwkv-init.pth"
         with FileLock(f"{args.proj_dir}/rwkv-init.lock"):
             if not os.path.exists(f"{args.proj_dir}/rwkv-init.pth"):
+                print("generating initial weights")
                 generate_init_weight(model, init_weight_name)  # save initial weights
         args.load_model = init_weight_name
 
-    rank_zero_info(f"########## Loading {args.load_model}... ##########")
+    print(f"########## Loading {args.load_model}... ##########")
     try:
         load_dict = torch.load(args.load_model, map_location="cpu")
     except:
-        rank_zero_info(f"Bad checkpoint {args.load_model}")
+        print(f"Bad checkpoint {args.load_model}")
         if args.my_pile_stage >= 2:  # try again using another checkpoint
             max_p = args.my_pile_prev_p
             if max_p == -1:
@@ -252,7 +260,7 @@ def run(config):
             else:
                 args.load_model = f"{args.proj_dir}/rwkv-{max_p}.pth"
             args.epoch_begin = max_p + 1
-            rank_zero_info(f"Trying {args.load_model}")
+            print(f"Trying {args.load_model}")
             load_dict = torch.load(args.load_model, map_location="cpu")
 
     if args.load_partial == 1:
