@@ -53,7 +53,7 @@ def download_pile(dataset_name):
         # Necessary for gpt-neox tokenizer to work
         "pip uninstall -y deepspeed && pip install --user -U git+https://github.com/EleutherAI/DeeperSpeed.git@eb7f5cff36678625d23db8a8fe78b4a93e5d2c75#egg=deepspeed", shell=True
     )
-    run_on_every_node(download_pile, dataset_name=dataset_name)
+    run_on_every_node(download_pile_remote, dataset_name=dataset_name)
     subprocess.run(
         # Use latest deepspeed for actual training. Will crash otherwise
         "pip uninstall -y deepspeed && pip install -U --user deepspeed", shell=True
