@@ -46,14 +46,11 @@ def download_model():
 @ray.remote(num_gpus=1)
 def download_pile():
     subprocess.run(
-        "ls /nvme/data/pile/enron", shell=True, check=True
+       "rm -rf /nvme/data/pile/; rm -rf ~/gpt-neox", shell=True, check=True
     )
-    #subprocess.run(
-    #    "rm -rf /nvme/data/pile/enron", shell=True, check=True
-    #)
-    #subprocess.run(
-    #    "cd ~/; cd gpt-neox; python prepare_data.py -d /nvme/data/pile -t HFTokenizer --vocab-file '/mnt/cluster_storage/20B_tokenizer.json'", shell=True, check=True
-    #)
+    subprocess.run(
+       "cd ~/; git clone https://github.com/Yard1/gpt-neox.git; cd gpt-neox; python prepare_data.py europarl -d /nvme/data/pile -t HFTokenizer --vocab-file '/mnt/cluster_storage/20B_tokenizer.json'", shell=True, check=True
+    )
 if __name__ == "__main__":
     ray.init()
     run_on_every_node(download_pile)
