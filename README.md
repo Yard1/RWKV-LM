@@ -2,6 +2,9 @@
 
 RWKV-v4neo on Ray Train.
 
+Cluster environment:
+![Cluster environment](cluster_env.png)
+
 Original readme in `ORIGINAL_README.md`.
 
 ## Instructions
