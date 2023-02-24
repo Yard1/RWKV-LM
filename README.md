@@ -1,6 +1,6 @@
 # RWKV on Ray Train
 
-RWKV-v4neo on Ray Train.
+RWKV-v4neo on Ray Train. Only the `RWKV-v4neo/train.py` script has been modified to work on Ray. As we are working on proper pytorch-lightning integration in Ray, some workarounds had to be used.
 
 Cluster environment:
 ![Cluster environment](cluster_env.png)
