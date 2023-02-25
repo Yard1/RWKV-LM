@@ -94,9 +94,7 @@ class train_callback(pl.Callback):
         trainer.my_loss_sum += trainer.my_loss
         trainer.my_loss_count += 1
         trainer.my_epoch_loss = trainer.my_loss_sum / trainer.my_loss_count
-        session.report(
-            {"loss": trainer.my_loss, "lr": trainer.my_lr,  "Gtokens": real_step * token_per_step / 1e9}
-        )
+        cp = None
         if trainer.is_global_zero:  # logging
             self.log("lr", trainer.my_lr, prog_bar=True, on_step=True)
             self.log("loss", trainer.my_epoch_loss, prog_bar=True, on_step=True)
@@ -107,15 +105,21 @@ class train_callback(pl.Callback):
                 if kt_s > 0:
                     lll["kt/s"] = kt_s
                 trainer.my_wandb.log(lll, step=int(real_step))
-            if args.magic_prime > 0:
-                expand_factor = 2 if args.my_qa_mask > 0 else 1
-                if int(real_step) == int(args.magic_prime * expand_factor // args.real_bsz) - 1:
+        if args.magic_prime > 0:
+            expand_factor = 2 if args.my_qa_mask > 0 else 1
+            if int(real_step) == int(args.magic_prime * expand_factor // args.real_bsz) - 1:
+                if trainer.is_global_zero:
                     to_save_dict = pl_module.state_dict()
+                    save_path = f"{args.proj_dir}/checkpoint-final"
+                    os.makedirs(save_path, exist_ok=True)
                     my_save(
                         to_save_dict,
-                        f"{args.proj_dir}/rwkv-final.pth",
+                        f"{save_path}/rwkv.pth",
                     )
-                
+                    cp = Checkpoint.from_directory(save_path)
+                else:
+                    cp = Checkpoint.from_dict({"dummy": "dummy"})
+        session.report({"loss": trainer.my_loss, "lr": trainer.my_lr,  "Gtokens": real_step * token_per_step / 1e9}, checkpoint=cp)
 
     def on_train_epoch_start(self, trainer, pl_module):
         args = self.args
