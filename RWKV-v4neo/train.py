@@ -465,11 +465,11 @@ if __name__ == "__main__":
         if node["Alive"] and node["Resources"].get("GPU", None):
             num_gpu_nodes += 1
             num_gpus += node["Resources"].get("GPU", 0)
-    args.num_nodes = num_gpu_nodes
+    args.num_nodes = int(num_gpu_nodes)
 
     trainer = TorchTrainer(
         run,
         train_loop_config={"args": args},
-        scaling_config=ScalingConfig(num_workers=num_gpus, use_gpu=True),
+        scaling_config=ScalingConfig(num_workers=int(num_gpus), use_gpu=True),
     )
     trainer.fit()
