@@ -164,6 +164,10 @@ class train_callback(pl.Callback):
         trainer.my_loss_sum = 0
         trainer.my_loss_count = 0
 
+        # Stop the training after we reach the desired epoch count
+        if trainer.current_epoch >= args.epoch_count:
+            trainer.should_stop = True
+
 
 @rank_zero_only
 def generate_init_weight(model, init_weight_name):
